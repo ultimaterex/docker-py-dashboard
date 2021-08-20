@@ -6,4 +6,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 COPY requirements.txt requirements.txt
 EXPOSE 5000
 COPY . .
-CMD ["flask", "run"]
+CMD ["python", "./app.py"]
