@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 #!/bin/bash
-FROM arm32v7/python:3.7-alpine3.13
+FROM balenalib/raspberry-pi-python:3.7-latest
 WORKDIR /code
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
