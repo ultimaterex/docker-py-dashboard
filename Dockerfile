@@ -1,4 +1,5 @@
 # syntax=docker/dockerfile:1
+#!/bin/bash
 FROM arm32v7/python:3.7-alpine3.13
 WORKDIR /code
 ENV FLASK_APP=app.py
