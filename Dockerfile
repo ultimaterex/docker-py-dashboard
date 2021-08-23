@@ -1,11 +1,6 @@
-# syntax=docker/dockerfile:1
-#!/bin/bash
-FROM balenalib/raspberry-pi-python:3.7-latest
-WORKDIR /code
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-EXPOSE 5000
+FROM arm32v6/python:3
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 CMD ["python", "./app.py"]
