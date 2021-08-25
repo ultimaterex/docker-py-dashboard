@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 # syntax=docker/dockerfile:1
 FROM balenalib/raspberry-pi-debian-python:latest
 WORKDIR /usr/src/app
